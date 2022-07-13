@@ -1,0 +1,814 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\title{Geography in the Field II: Mapping London}
+\author{Week 08 by \href{https://mappingdutchman.com/}{Justin van Dijk}}
+\date{Last modified: 2022-01-20}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Geography in the Field II: Mapping London},
+  pdfauthor={Week 08 by Justin van Dijk},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage{amsthm}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{section}{%
+\chapter*{}\label{section}}
+\addcontentsline{toc}{chapter}{}
+
+\hypertarget{why-london}{%
+\section*{Why London?}\label{why-london}}
+\addcontentsline{toc}{section}{Why London?}
+
+It is an exciting time to be a quantitative geographer in London. The city is generating more data for us to work with than ever before. Maps, graphics and infographics about the city are everywhere more people live here than at any time in London's history. A great example of the variety of data that is available for London is captured in the book \href{https://www.oliveruberti.com/the-information-capital}{London: The Information Capital} by \href{https://jcheshire.com/}{James Cheshire} and \href{https://www.oliveruberti.com/}{Oliver Uberti}. As geographers, we are in a critical position both to be able to capitalise on these developments for our own research but also view them a little more critically than others who have not had the benefit of decades of social and spatial research.
+
+\begin{figure}
+
+{\centering \includegraphics[width=500pt]{images/w08/information_capital} 
+
+}
+
+\caption{London: The Information Capital by Professor [James Cheshire](https://jcheshire.com/) and [Oliver Uberti](https://www.oliveruberti.com/the-information-capital).}\label{fig:london-information-capital}
+\end{figure}
+
+The application of quantitative research methods to data about the ``real-world'' is at the heart of this exercise. All data are collected at a single point in time and so may become out of date, or they may be too generalised to capture the minutiae of an area. Such limitations are not as significant as they once were since we now have access to data in more detail than ever before, but this does not relinquish the need to get a sense for the broader context of the study area.
+
+\hypertarget{lecture-material}{%
+\section*{Lecture material}\label{lecture-material}}
+\addcontentsline{toc}{section}{Lecture material}
+
+You can access the Lecturecast recording here: \href{https://echo360.org.uk/section/499636bf-4a88-4c90-a268-ba74bd9ef17d/home}{{[}Link{]}}. The slides for this week's lecture can be downloaded here: \href{https://github.com/jtvandijk/GEOG0030/tree/master/data/ppt/w08_gif.pdf}{{[}Link{]}}.
+
+\hypertarget{this-week}{%
+\section*{This week}\label{this-week}}
+\addcontentsline{toc}{section}{This week}
+
+This week we will be mapping \textbf{crime hotspots} in the London boroughs of \href{https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en}{Camden} and \href{https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en}{Islington}. The data we will be working with for this week's task are downloaded from the \href{https://data.police.uk/}{data.police.uk} website. The release of official police crime data to the public was controversial at the time, with some people expressing concern that areas will have reputational damage, that the identities of victims would be revealed and that there would be social and economic consequences such as a fall in house prices in high crime areas. Others argued that the release of the data would be an important step in making the police force more accountable since the public could track whether crimes were being solved or if police are using their stop and search powers to target specific groups.
+
+\textbf{Note}
+You are expected to work through the following computer tutorial on your own, however, you will submit your worksheet for this week as a group.
+
+\hypertarget{getting-started}{%
+\section*{Getting started}\label{getting-started}}
+\addcontentsline{toc}{section}{Getting started}
+
+Some of you may already have played around with some GIS software such as \href{https://www.arcgis.com/index.html}{ArcGIS}, but today we will be using the open-source GIS sofware suite \href{https://www.qgis.org/en/site/}{QGIS}. A copy of \href{https://www.qgis.org/en/site/}{QGIS} comes pre-installed on all cluster room computers as well as on \href{https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere}{Desktop@UCL Anywhere}. Desktop@UCL Anywhere is a service that allows remote access to UCL resources for staff and students. All you need is a valid UCL user ID and password, an internet connection and supported web browser. Today we will be using this Desktop@UCL Anywhere service.
+
+Let's get started by opening an internet browser such as \href{https://www.google.co.uk/chrome/?brand=FHFK\&gclid=Cj0KCQiAip-PBhDVARIsAPP2xc26lB3ONziz2KnCd7Ac1MVjTx66n0Ull4R8oiQqzXzgKnJSqRCwK60aAhmFEALw_wcB\&gclsrc=aw.ds}{Google Chrome} or \href{https://www.microsoft.com/en-us/edge}{Microsoft Edge} and navigating to: \url{https://ucldesktop.cloud.com}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/ucl_login} 
+
+}
+
+\caption{[Desktop@UCL Anywhere](https://ucldesktop.cloud.com) login interface. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/ucl_login.png)}\label{fig:ucl-desktop-login}
+\end{figure}
+
+You can log in with your normal \textbf{UCL username} and \textbf{UCL password}. After this, you click on the Desktop@UCL Anywhere icon to start the service:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/ucl_start} 
+
+}
+
+\caption{Starting [Desktop@UCL Anywhere](https://ucldesktop.cloud.com). [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/ucl_start.png){target="_blank"}}\label{fig:ucl-desktop-start}
+\end{figure}
+
+It may take a few minutes to load, but after this you should see your normal UCL Windows desktop:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/ucl_login_success} 
+
+}
+
+\caption{Your [Desktop@UCL Anywhere](https://ucldesktop.cloud.com). [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/ucl_login_success.png){target="_blank"}}\label{fig:ucl-desktop-login-success}
+\end{figure}
+
+\hypertarget{downloading-crime-data}{%
+\section*{Downloading crime data}\label{downloading-crime-data}}
+\addcontentsline{toc}{section}{Downloading crime data}
+
+For our crime data, we will use data directly from the Police Data Portal, which you can find at \href{https://data.police.uk/}{data.police.uk}. This Data Portal allows you to access and generate tabular data for crime recorded in the U.K. across different the different police forces. In total, there are 45 territorial police forces (TPF) and 3 special police forces (SPF) of the United Kingdom. Each TPF covers a specific area in the UK (e.g.~the ``West Midlands Police Force''), whilst the SPFs are cross-jurisdiction and cover specific types of crime, such as the British Transport Police. Therefore, when we want to download data for a specific area, we need to know which Police Force covers the Area of Interest (AOI) for our investigation.
+
+When you look to download crime data for London, for example, there are two territorial police forces working within the city and its greater metropolitan area:
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{The Metropolitan Police Force}, which covers nearly the entire London area, including Greater London
+\item
+  \emph{The City of London Police}, which covers the City of London. The Met has no jurisdiction in the Cit of London.
+\end{itemize}
+
+Today we will leave the City of London for what it is as we are looking at \textbf{crime hotspots} in the London boroughs of \href{https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en}{Camden} and \href{https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en}{Islington}, both of which are not part of the City of London. To do this, open Google Chrome (\textbf{within} your Desktop@UCL environment) and navigate to \href{https://data.police.uk/}{data.police.uk}. \emph{You are free to use another browser, however, some of the steps below describing how to download some of the files may be slightly different.}
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/data_police} 
+
+}
+
+\caption{The landing page of [data.police.uk](https://data.police.uk). [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/data_police.png){target="_blank"}}\label{fig:data-police}
+\end{figure}
+
+Click on \textbf{Downloads} and subsequently select \emph{November 2021} to \emph{November 2021} as data range and tick the box for the \emph{Metropolitan Police Services}. With this selection we can now download all crime data recorded by the Metropolitan Police Services for the month of November 2021.
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/select_data} 
+
+}
+
+\caption{Select the data that we want to download. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/select_data.png){target="_blank"}}\label{fig:data-police-select}
+\end{figure}
+
+Make sure that the box in front of \textbf{Include crime data} is ticked - it should be ticked by default - and proceed to click on \textbf{Generate file}. Once your file is generated you can click on \textbf{Download now}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/download_now} 
+
+}
+
+\caption{Download the data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/download_now.png){target="_blank"}}\label{fig:data-police-download}
+\end{figure}
+
+Save the file as \texttt{crime\_met\_november2021} in your \texttt{Downloads} folder.
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/save_now} 
+
+}
+
+\caption{Save the data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_now.png){target="_blank"}}\label{fig:data-police-save}
+\end{figure}
+
+Your download should be finished within seconds. After downloading the data, go to your \texttt{Downloads} folder and right click on the \texttt{crime\_met\_november2021.zip} folder and click on \textbf{Extract All}. The data, which is in a compressed format (\texttt{zip}), will now be extracted so that we can use it within QGIS.
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/extract_zip} 
+
+}
+
+\caption{Unzip the data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/extract_zip.png){target="_blank"}}\label{fig:data-police-unzip}
+\end{figure}
+
+Now we have downloaded the crime data, we need to download some background and reference data. Two data sets are available on Moodle: the boundaries of the boroughs in London as well as the London road network. Within your UCL Desktop environment, navigate to the Geography in the Field II Moodle page and scroll down to \textbf{Week 08: Mapping London}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/moodle} 
+
+}
+
+\caption{Geography in the Field II Moodle page. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/moodle.png){target="_blank"}}\label{fig:moodle-w8}
+\end{figure}
+
+Under the \textbf{Further resources} heading you will see two files: \texttt{Roads\ for\ mapping\ exercise} and \texttt{Boroughs\ for\ mapping\ exercise}. Right click on on the first file and click on \textbf{Save link as \ldots{}}. Give the file the name \texttt{roads} and save to your download folder.
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/save_as} 
+
+}
+
+\caption{Save link as. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_as.png){target="_blank"}}\label{fig:moodle-w8-save}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/save_as_save} 
+
+}
+
+\caption{Save file in your downloads folder. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_as_save.png){target="_blank"}}\label{fig:moodle-w8-save-save}
+\end{figure}
+
+Right click on on the second file and click on \textbf{Save link as \ldots{}}. Give the file the name \texttt{boroughs} and save to your download folder.
+
+After downloading both files, go to your \texttt{Downloads} folder and make sure both are extracted. Your \texttt{Downloads} folder should look something like this:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/all_download} 
+
+}
+
+\caption{Your download folder should now contain three **unzipped** folders containing our crime data, our borough data and our road data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/all_download.png){target="_blank"}}\label{fig:your-downloads}
+\end{figure}
+
+The final step we need to take is to copy our downloaded data to a new folder. In your \texttt{Documents} folder, create a new folder \texttt{GEOG0014\_W08}. We will use this folder as our \emph{working directory}. Now move the three folders containg the crime data, borough data and road data that you unzipped from your \texttt{Downloads} folder to this new \texttt{GEOG0014\_W08} folder. Your \emph{working directory} should look like this:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/wd} 
+
+}
+
+\caption{Your working directory is now all set up. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/wd.png){target="_blank"}}\label{fig:wd}
+\end{figure}
+
+We are now ready to move to mapping in QGIS.
+
+\textbf{Note}
+The \texttt{roads} and \texttt{boroughs} file that we downloaded is something called a \texttt{shapefile.} A \texttt{shapefile} is a file that GIS software uses to store spatial data. In the case of a shapefile this is in actual fact a misnomer because a \texttt{shapefile} consists of a \textbf{collection of files}. Without going into detail: each of these files does something slightly different and the the software we will be using requires needs all of them in order to understand the data.
+
+\hypertarget{mapping-crime-data}{%
+\section*{Mapping crime data}\label{mapping-crime-data}}
+\addcontentsline{toc}{section}{Mapping crime data}
+
+Now we have downloaded and organised our data, we can open QGIS. QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. In the search box of the taskbar, type in QGIS and click on \textbf{QGIS Desktop 3.16} to open the software. \textbf{Make sure you do not open QGIS 2.18 as the steps in this tutorial will not work!}
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/open_qgis} 
+
+}
+
+\caption{Open **QGIS Desktop 3.16.11**. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/open_qgis.png){target="_blank"}}\label{fig:open-qgis}
+\end{figure}
+
+It may take a little while before QGIS has started, so be patient. Once opened, you will see the QGIS interface:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/interface} 
+
+}
+
+\caption{The QGIS interface. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/interface.png){target="_blank"}}\label{fig:interface-qgis}
+\end{figure}
+
+On the left hand sizes you see two panels: \textbf{Layers} and \textbf{Browser}. We do not really need the second one, so you can close it by clicking on the \texttt{x}.
+
+\hypertarget{adding-data}{%
+\subsection*{Adding data}\label{adding-data}}
+\addcontentsline{toc}{subsection}{Adding data}
+
+We can now start by adding our data. We will start by adding our \texttt{roads}. Click on \textbf{Layer} \textgreater{} \textbf{Add Layer} \textgreater{} \textbf{Add Vector Layer \ldots{}}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/add_vector} 
+
+}
+
+\caption{Adding vector data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_vector.png){target="_blank"}}\label{fig:add-vector}
+\end{figure}
+
+Click on the three dots (\textbf{\ldots{}}) next to the \textbf{Vector Dataset(s)} box and navigate to your \emph{working directory}. Then go into your \texttt{roads} folder and click on the roads file with the \texttt{SHP\ File} type. This is the roads \texttt{shapefile} that we want.
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/add_shp} 
+
+}
+
+\caption{Loading the roads shapefile. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_shp.png){target="_blank"}}\label{fig:add-shp}
+\end{figure}
+
+Click \textbf{Open}. Then click \textbf{Add}. If you get a message popping up saying something about ``Select Transformations for roads'' just click on \textbf{OK}. Now \textbf{Close} the dialog box. You should now see the road network of Camden and Islington loaded:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/roads_loaded} 
+
+}
+
+\caption{Roads loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/roads_loaded.png){target="_blank"}}\label{fig:roads-loaded}
+\end{figure}
+
+Now repeat these steps for our \texttt{boroughs} file, making sure again that inside your \texttt{boroughs} folder you select the boroughs file with the \texttt{SHP\ File} type. You now will have both data loaded, although the \texttt{boroughs} layer will be drawn on top of your \texttt{roads} layer. Another thing to note is that the colours of your \texttt{roads} and \texttt{boroughs} file may be different than the ones in the image - QGIS randomly picks a colour when a map layer is first loaded.
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/bor_loaded} 
+
+}
+
+\caption{Boroughs loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/bor_loaded.png){target="_blank"}}\label{fig:bor-loaded}
+\end{figure}
+
+\hypertarget{organising-our-layers}{%
+\subsection*{Organising our layers}\label{organising-our-layers}}
+\addcontentsline{toc}{subsection}{Organising our layers}
+
+Now we have our first set of data loaded, we can reorganise them a little. In the \textbf{Layers} panel, we can drag the \texttt{roads} layer on top of the \texttt{boroughs} layer to change their order. We can also zoom to a layer's full extent (right click on \texttt{roads} or \texttt{boroughs} \textgreater{} \textbf{Zoom to Layer}), change a layer's colour (right click on \texttt{roads} or \texttt{boroughs} \textgreater{} \textbf{Properties \ldots{}} \textgreater{} change the colour under the \textbf{Symbology} tab), and zoom in and out of the map by scrolling:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/organise_data} 
+
+}
+
+\caption{Organising the order of our data.. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/organise_data.gif){target="_blank"}}\label{fig:organise-data}
+\end{figure}
+
+Before doing anything else, now would be a good time to save our QGIS project. Go to \textbf{Project} \textgreater{} \textbf{Save as} and save your file in your \emph{working directory} as \texttt{crime\_map}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/save_project} 
+
+}
+
+\caption{Saving your QGIs project. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_project.png){target="_blank"}}\label{fig:save-project}
+\end{figure}
+
+\hypertarget{inspecting-crime-data-in-excel}{%
+\subsection*{Inspecting crime data in Excel}\label{inspecting-crime-data-in-excel}}
+\addcontentsline{toc}{subsection}{Inspecting crime data in Excel}
+
+The next thing we want to do is have a closer look at the crime data that we downloaded before loading them too in QGIS.
+
+\textbf{Note}
+The crime file that we downloaded is in a so-called \texttt{csv} format. \texttt{csv} stands for comma (or character) separated values. A \texttt{csv} fiile can be thought of as stripped down Excel spreadsheets in which every column of data is separated by a comma. If you open a \texttt{csv} file witin Excel, however, it will look ``normal''.
+
+Navigate to your \texttt{working\ directory} and go to \texttt{crime\_met\_november2021} \textgreater{} \texttt{2021\_11}. Now open the \texttt{2011-11-metropolitan-street} file using Excel.
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/inspect_data} 
+
+}
+
+\caption{Inspecting our crime data `csv`. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/inspect_data.gif){target="_blank"}}\label{fig:inspect-data}
+\end{figure}
+
+Besides a column containing a unique \texttt{Crime\ ID} as well as the \texttt{Month} in which the crime has been recorded, our crime data set contains several other columns of data:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.32}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.68}}@{}}
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+Column
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Meaning
+\end{minipage} \\
+\midrule
+\endhead
+\texttt{Reported\ by} & The force that provided the data about the crime. \\
+\texttt{Falls\ within} & The area in which the crime was recorded. \\
+\texttt{Longitude\ and\ Latitude} & The anonymised coordinates of the crime. \\
+\texttt{LSOA\ code\ and\ LSOA\ name} & References to the Lower Layer Super Output Area that the anonymised point falls into, according to the LSOA boundaries provided by the Office for National Statistics. \\
+\texttt{Crime\ type} & One of the crime types used to categorise the offence. \\
+\texttt{Last\ outcome\ category} & A reference to whichever of the outcomes associated with the crime occurred most recently. \\
+\texttt{Context} & A field provided for forces to provide additional human-readable data about individual crimes. \\
+\bottomrule
+\end{longtable}
+
+For us, the main fields we are interested include \texttt{Longitude} and \texttt{Latitude} (for plotting the crimes in QGIS) as well as \texttt{Crime\ Type} (to filter crime based on type of crime). After inspecting the data, you can close Excel again. Make sure that you do \textbf{not} save the file.
+
+\hypertarget{loading-crime-data-into-qgis}{%
+\subsection*{Loading crime data into QGIS}\label{loading-crime-data-into-qgis}}
+\addcontentsline{toc}{subsection}{Loading crime data into QGIS}
+
+Now we know what we are dealing with, we can load our crime data into QGIS. To do so, there are several steps we need to take:
+
+\begin{itemize}
+\tightlist
+\item
+  Go to \textbf{Layer} \textgreater{} \textbf{Add Layer} \textgreater{} \textbf{Add Delimited Text Layer \ldots{}}. Because our data is a \texttt{csv} file we need to load it as a file in which columns are delimited by a certain character; a comma in our case.
+\item
+  Click on the three dots (\emph{\ldots{}}) next to the \textbf{File name} box and navigate to your \emph{working directory}. Then go into your \texttt{crime\_met\_november2021} folder, your \texttt{2021-11} folder, and \textbf{Open} the \texttt{2021-11-metropolitan-street} file.
+\item
+  Under \textbf{Geometry Definitions} make sure that \textbf{X field} is set to \texttt{Longitude} and \textbf{Y field} is set to \texttt{Latitude}. Here we inform QGIS that we are dealing with locations.
+\item
+  Without going into further details, we need to tell QGIS in which projection our crime locations are recorded. With a projection QGIS will know how to plot the crime locations on their correct positions. To do so, still under \textbf{Geometry Definitions} tab, click on the \textbf{Select CRS} button. You will find this is directly next to the \emph{invalid projection} message. In the \textbf{Filter} box type: \texttt{EPSG\ 4326}. Only one option should show up: \texttt{WGS\ 84}. Select this option and click \textbf{OK}.
+\item
+  Now click \textbf{Add}. \emph{This may take a little bit of time!}. Click \textbf{Close} to exit the dialog box.
+\end{itemize}
+
+The \textbf{GIF} below summarises these steps:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/load_crime_data} 
+
+}
+
+\caption{Loading our crime data into QGIS. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/load_crime_data.gif){target="_blank"}}\label{fig:load-crime-data}
+\end{figure}
+
+Here we now have every crime reported for the month November 2021 appearing across all of London. We can zoom to the Camden and Islington by right clicking on the \texttt{roads} layer and opting for \textbf{Zoom to Layer}:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/crime_ci} 
+
+}
+
+\caption{All crime that is recorded in Camden and Islington in November 2021. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/crime_ci.png){target="_blank"}}\label{fig:crime-ci}
+\end{figure}
+
+\hypertarget{creating-selections-in-qgis}{%
+\subsection*{Creating selections in QGIS}\label{creating-selections-in-qgis}}
+\addcontentsline{toc}{subsection}{Creating selections in QGIS}
+
+Because the crime data set covers the whole of London, and even records some crimes in locations outside of London, QGIS may get a little slow. As we are only interested in crimes in Camden and Islington we want to keep only those crimes that took place in these boroughs, and remove the rest. We will do that in two steps. First we wil export the boundaries of Camden and Islington as a separate file. Second we will select the crimes that fall within the boundaries of Camden and Islington. Let's first export the boundaries of Camden and Islington:
+
+\begin{itemize}
+\tightlist
+\item
+  Untick the boxes of the \texttt{roads} and \texttt{2021-11-metropolitan-street} layers in the \textbf{Layers} panel to deactivate them.
+\item
+  Select the \texttt{boroughs} layer by clicking on it.
+\item
+  Click on the \textbf{Select Features by Area or Single Click} button:
+\end{itemize}
+
+\begin{center}\includegraphics[width=1.39in]{images/w08/select} \end{center}
+
+\textbf{Note}
+The \textbf{Select Features by Area or Single Click} button may be located in a different place than it is in the \textbf{GIF} below.
+
+\begin{itemize}
+\tightlist
+\item
+  Press and hold the \textbf{Shift} button on your keyboard and click on Camden and Islington.
+\item
+  Right click on the \texttt{boroughs} layer in the \textbf{Layers} panel \textgreater{} \textbf{Export} \textgreater{} \textbf{Save Selected Features As \ldots{}}.
+\item
+  Set the \textbf{Format} to \textbf{Esri Shapefile}.
+\item
+  Click on the three dots (\textbf{\ldots{}}) next to \textbf{File name}, navigate to your \emph{working directory} and \textbf{Save} the file as \texttt{cam\_is}.
+\item
+  A new layer should now appear and you can untick the box next to the \texttt{boroughs} layer.
+\end{itemize}
+
+The \textbf{GIF} below summarises these steps:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/select_export} 
+
+}
+
+\caption{Selecting and exporting the boroughs of Camden and Islington. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/select_export.gif){target="_blank"}}\label{fig:select-boroughs}
+\end{figure}
+
+The next thing to do is to extract only those crimes that fall within the boundaries of our newly created \texttt{shapefile}:
+
+\begin{itemize}
+\tightlist
+\item
+  Go to \textbf{Vector} \textgreater{} \textbf{Geoprocessing Tools} \textgreater{} \textbf{Clip \ldots{}}.
+\item
+  Set \texttt{2011-11-metropolitan-street} as \textbf{Input layer} and set \texttt{cam\_is} as \textbf{Overlay layer}.
+\item
+  Click on the three dots (\textbf{\ldots{}}) next to the empty box with \emph{{[}Create temporary layer{]}} and opt for \textbf{Save to File \ldots{}}. Navigate to your \emph{working directory} and type in \texttt{cam\_is\_clip} as \textbf{File name}. Change \textbf{Save as type} to \texttt{SHP\ files\ (*.shp)} and click \textbf{Save}.
+\item
+  Click \textbf{Run}. \emph{This may take a few seconds.} Once the process is done, you can click \textbf{Close}.
+\end{itemize}
+
+We now have successfully ``clipped'' the crimes that occurred within the boundaries of Camden and Islington. The \textbf{GIF} below summarises these steps:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/select_crime} 
+
+}
+
+\caption{Selecting and exporting the crimes that fall within the boroughs of Camden and Islington. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/select_crime.gif){target="_blank"}}\label{fig:select-crimes}
+\end{figure}
+
+Before moving to our visualisation, we can remove the \texttt{2011-11-metropolitan-street} layer by right clicking on the \texttt{layer} in the \textbf{Layers} panel and opting for \textbf{Remove Layer\ldots{}}. We can do the same for the \texttt{boroughs} layer. Our QGIS screen should now look something like this:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/ready_vis} 
+
+}
+
+\caption{We are now ready to visualise our data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/ready_vis.png){target="_blank"}}\label{fig:ready-4-vis}
+\end{figure}
+
+\textbf{Note}
+Do not forget to save your progress once a while!
+
+\hypertarget{visualising-data-in-qgis}{%
+\subsection*{Visualising data in QGIS}\label{visualising-data-in-qgis}}
+\addcontentsline{toc}{subsection}{Visualising data in QGIS}
+
+Based on the shapes of the streets and the outline of the street network, you may be able to recognise your allocated street. However, we can also add something called a \emph{base map} layer. A base map is a layer with geographic information that serves as a background and is incredibly useful when you want to add some context to your map. We do need a little plugin to add this base map. We can do that as follows:
+
+\begin{itemize}
+\tightlist
+\item
+  Go to \textbf{Plugins} \textgreater{} \textbf{Manage and Install Plugins}.
+\item
+  Search for \textbf{QuickMapServices} and click on \textbf{Install plugin}.
+\item
+  Once the plugin is installed you can go to \textbf{Web} \textgreater{} \textbf{QuickMapServices} \textgreater{} \textbf{OSM} \textgreater{} \textbf{OSM Standard}. \emph{OSM stands for \href{https://www.openstreetmap.org/\#map=6/54.910/-3.432}{OpenStreetMap}. OpenStreetMap is a collaborative project to create a free editable geographic database of the world.} It may take a few seconds to load the base map.
+\item
+  Turn off the Camden and Islington map layer (\texttt{cam\_is}) in the \textbf{Layers} panel by unticking it.
+\end{itemize}
+
+You now have a view of the street data, pulled from OpenStreetMap, with the crime data drawn on top. The \textbf{GIF} below summarises these steps:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/add_basemap} 
+
+}
+
+\caption{Adding a basemap layer. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_basemap.gif){target="_blank"}}\label{fig:adding-basemap}
+\end{figure}
+
+The next thing we want to do is get some more insight into our crimes. As we know: the data records crime by type, so let's use this information in our visualisation:
+
+\begin{itemize}
+\tightlist
+\item
+  Right click on the \texttt{cam\_is\_clip} layer in the \textbf{Layers} panel and click on \textbf{Properties \ldots{}}. Here we can change the symbology of the layer.
+\item
+  At the top of the menu change \textbf{Single Symbol} to \textbf{Categorized}.
+\item
+  Click on the \textbf{Value} dropdown menu and select \texttt{Crime\ type}. \emph{Note that these are the columns that we have seen when we looked at the data in Excel.}
+\item
+  At the bottom of the menu click on \textbf{Classify}. All the different crime types now appear, with each their own symbol. Click \textbf{Apply} and click \textbf{OK}.
+\end{itemize}
+
+The QGIS screen now shows a colour for each crime type. The \textbf{GIF} below summarises these steps:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/colour_crime} 
+
+}
+
+\caption{Differentiating crime types. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/colour_crime.gif){target="_blank"}}\label{fig:colour-crimes}
+\end{figure}
+
+In the \textbf{Layers} panel, you can now expand the \texttt{cam\_is\_clip} layer and switch on and off individual crime types by ticking or unticking their respective boxes:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/one_crime} 
+
+}
+
+\caption{Only crime classified as *anti-social behaviour* is shown. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/one_crime.png){target="_blank"}}\label{fig:one-crime}
+\end{figure}
+
+In addition, we can create a \textbf{hotspot} or \textbf{heatmap}. QGIS can do this automatically by mapping the density of the points:
+
+\begin{itemize}
+\tightlist
+\item
+  Right click on the \texttt{cam\_is\_clip} layer in the \textbf{Layers} panel and click on \textbf{Properties \ldots{}}. Here we can change the symbology of the layer.
+\item
+  At the top of the menu change \textbf{Single Symbol} to \textbf{Heatmap}.
+\item
+  Using the drop down menu, change the \textbf{Color ramp} to \textbf{Magma} for a little more exciting map.
+\item
+  Under \textbf{Layer Rendering} set the \textbf{Opacity} to 60\%, so to blend the heatmap with the OSM basemap. Click \textbf{Apply}. \emph{This may take a few seconds.} Then click \textbf{OK}.
+\end{itemize}
+
+We now have created a rather nice visualisation of all crime in Camden and Islington. The \textbf{GIF} below summarises these steps:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/hot_crime} 
+
+}
+
+\caption{Adding a basemap layer. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/hot_crime.gif){target="_blank"}}\label{fig:hot-crime}
+\end{figure}
+
+But what if we only want to create a density map only for a given crime type such as \emph{anti-social behaviour}, we can do that as follows:
+
+\begin{itemize}
+\tightlist
+\item
+  Right click on the \texttt{cam\_is\_clip} layer in the \textbf{Layers} panel and click on \textbf{Open Attribute Table}.
+\item
+  In the \textbf{Attribute Table} click on the button that says \textbf{Select Features Using Expression}:
+\end{itemize}
+
+\begin{center}\includegraphics[width=0.83in]{images/w08/select_exp} \end{center}
+
+- Double click on \texttt{Crime\ type} in the \textbf{Fields and Values} drop down menu. The \texttt{crime\ type} variable now gets added to the \textbf{Expression}.
+- Directly next to the \texttt{"Crime\ type"} part of the expression type \texttt{=}.
+- Now click on the \textbf{All Unique} button to get all unique values that are stored in the \texttt{crime\ type} variable. Double click on \emph{Anti-social behaviour} to add this to the expression.
+- Click on \textbf{select Features} and \textbf{Close} the dialogue box and the \textbf{Attribute Table}. The selected crimes should now show up in yellow.
+
+Just as we did before with our two boroughs, we can export our selection to a new \texttt{shapefile}:
+
+\begin{itemize}
+\tightlist
+\item
+  Right click on the \texttt{cam\_is\_clip} layer in the \textbf{Layers} panel \textgreater{} \textbf{Export} \textgreater{} \textbf{Save Selected Features As \ldots{}}.
+\item
+  Set the \textbf{Format} to \textbf{Esri Shapefile}.
+\item
+  Click on the three dots (\textbf{\ldots{}}) next to \textbf{File name}, navigate to your \emph{working directory} and \textbf{Save} the file as \texttt{cam\_is\_asb}.
+\item
+  A new layer should now appear and you can untick the box next to the \texttt{cam\_is\_clip} layer.
+\end{itemize}
+
+Once you have a new layer, you can update the symbology again to create a \textbf{heatmap}. The \textbf{GIF} below summarises these steps:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/hot_crime_asb} 
+
+}
+
+\caption{Selecting all crime recorded as *anti-social behaviour* and exporting this to a new `shapefile`. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/hot_crime_asb.gif){target="_blank"}}\label{fig:hot-crime-asb}
+\end{figure}
+
+\hypertarget{creating-a-map-in-qgis}{%
+\subsection*{Creating a map in QGIS}\label{creating-a-map-in-qgis}}
+\addcontentsline{toc}{subsection}{Creating a map in QGIS}
+
+We have been through the key steps that we need to create the map, however, there are some other things we can do. For instance, if we want to put the borough outlines on, we can:
+
+\begin{itemize}
+\tightlist
+\item
+  Tick the box next to the \texttt{cam\_is} layer in the \textbf{Layers} panel to switch the layer back on.
+\item
+  Right click on the \texttt{cam\_is} layer and choose \textbf{Properties}.
+\item
+  Under the \textbf{Symbology} tab we can make some adjustments to the \textbf{Simple Fill} settings: in this case we can set the \textbf{Fill style} to \textbf{No brush}. We can also make the outline thicker by increasing the \textbf{Stroke width}. Once this is done click \textbf{Apply} followed by \textbf{OK}.
+\end{itemize}
+
+The \textbf{GIF} below summarises these steps:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/bor_out} 
+
+}
+
+\caption{Adding borough outlines to the map. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/bor_out.gif){target="_blank"}}\label{fig:bor-out}
+\end{figure}
+
+In this exercise we have downloaded some data, created a spatial data object by loading the data into QGIS, made selections to our data (i.e.~by clipping out our boroughs and by making a selection on crime type), and we have looked at some of the styling options. The final step is to finalise the styling and get the map out of QGIS. This is done through the QGIS \textbf{Print Layout}:
+
+\begin{itemize}
+\tightlist
+\item
+  Go to \textbf{Project} \textgreater{} \textbf{New Print Layout \ldots{}}.
+\item
+  Give it a name, e.g.~\texttt{crime\_asb}.
+\item
+  A new window opens up. In the toolbar on the left hand side, click on the \textbf{Add map} button:
+\end{itemize}
+
+\begin{center}\includegraphics[width=1in]{images/w08/add_map} \end{center}
+
+- Draw a box on the canvas. The crime map should now appear.
+- Using the toolbar on the left hand side, there is several other options such as \textbf{Add scale bar}, \textbf{Add North Arrow}, and \textbf{Add Legend}. \emph{There are lots of options to play around with!}
+- Once you are happy with your map, you can save your map by going to \textbf{Layout} \textgreater{} \textbf{Export as Image \ldots{}}. If you get a message popping up saying something about ``Project Contains WMS Layers'' just click on \textbf{Close}. Navigate to your \emph{working directory}, give your map a name and click \textbf{Save}. Also click \textbf{Save} on the next window that pops up.
+
+These steps should create an image which you should be able to find in your \emph{working directory}. The \textbf{GIF} below summarises these steps:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/export_map} 
+
+}
+
+\caption{Finalising a map in the **Print Layout** and saving a map as an image. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/export_map.gif){target="_blank"}}\label{fig:export-map}
+\end{figure}
+
+This image is now ready to be used outside QGIS!
+
+\textbf{Note}
+There are many more options on how to style the maps, so do play around with colours and settings when making your maps.
+
+\hypertarget{worksheet}{%
+\section*{Worksheet}\label{worksheet}}
+\addcontentsline{toc}{section}{Worksheet}
+
+Excellent. You have worked through the steps in this computer tutorial on \protect\hyperlink{downloading-crime-data}{downloading} and \protect\hyperlink{mapping-crime-data}{mapping} crime data, you need to conduct the following analysis \textbf{as a group}:
+
+\hypertarget{part-i-camden-and-islington}{%
+\subsubsection*{Part I: Camden and Islington}\label{part-i-camden-and-islington}}
+\addcontentsline{toc}{subsubsection}{Part I: Camden and Islington}
+
+This concerns \emph{anti-social behaviour} and \emph{theft from person} in Camden and Islington.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Using what you have learnt in the computer tutorial to create two heatmaps for \textbf{Camden and Islington}. The first of \emph{anti-social behaviour} and the second of \emph{theft from person}.
+\item
+  There are a number of crime \textbf{hot spots} for \emph{anti-social behaviour} and \emph{theft from person} that appear near UCL (particularly around Kings Cross Station). Visit one of these areas (\textbf{during daylight hours}) and note down the features that distinguish them from their surrounding lower crime areas. \emph{You may use two sides of your field notebook for your observations.} If you want to, you can take pictures to add to your worksheet submission.
+\end{enumerate}
+
+\hypertarget{part-ii-your-allocated-street}{%
+\subsubsection*{Part II: Your allocated street}\label{part-ii-your-allocated-street}}
+\addcontentsline{toc}{subsubsection}{Part II: Your allocated street}
+
+This concerns \emph{all types} of crime in your allocated street.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Using the full crime data set, zoom in on the street you have been allocated. What is the dominant type of crime on this street and its surrounding area in \textbf{November 2021}?
+\item
+  Revisit the \href{https://data.police.uk/}{data.police.uk} website and create a heatmap for all crime around your street in \textbf{November 2019} and \textbf{November 2020}. As there may be very few or no crimes in your allocated street, you can zoom out a little to incorporate surrounding streets. Do the patterns and dominant crime types differ over the course of the years?
+\item
+  Given your knowledge of your street and your observations of the crime hotspots around UCL and Kings Cross what other data sets might be useful to analyse crime in London?
+\end{enumerate}
+
+\hypertarget{worksheet-submission}{%
+\section*{Worksheet submission}\label{worksheet-submission}}
+\addcontentsline{toc}{section}{Worksheet submission}
+
+Please submit your answers to the questions above in a short \textbf{group} report: no more than \textbf{500} words, a maximum of \textbf{4} maps, and, if using, a maximum of \textbf{2} photographs. This is the worksheet task for the week. You can find the submission link for this final worksheet task on \href{https://moodle.ucl.ac.uk/course/view.php?id=23839}{Moodle}; one submission per group. \href{https://www.youtube.com/watch?v=h_D3VFfhvs4}{That is it for this week's Geography in the Field!}
+
+\end{document}
