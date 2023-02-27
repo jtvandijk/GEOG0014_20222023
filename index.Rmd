@@ -416,7 +416,7 @@ There are many more options on how to style the maps, so do play around with col
 Excellent. You have worked through the steps in this computer tutorial on [downloading](#downloading-crime-data) and [mapping](#visualising-data) crime data, you need to conduct the following analysis **as a group**:
 
 #### Part I: Camden and Islington {-} 
-:::warning
+:::tip
 This part of the assignment focuses on *anti-social behaviour* and *theft from person* in Camden and Islington.
 :::
 
@@ -431,7 +431,7 @@ For your visit: **make sure that you visit as a group during the scheduled Frida
 3. You may use 1-2 pages your field notebook for your individual observations. If you want to, you can take photographs to add to your worksheet submission. Please avoid photographs that clearly feature individual people.
 
 #### Part II: Your allocated street {-} 
-:::warning
+:::tip
 This part of the assignment focuses on *all types* of crime in your allocated street.
 :::
 
