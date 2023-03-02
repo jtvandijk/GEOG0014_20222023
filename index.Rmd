@@ -22,6 +22,9 @@ knitr::include_graphics('images/w08/information_capital.png')
 
 The application of quantitative research methods to data about the "real-world" is at the heart of this exercise. All data are collected at a single point in time and so may become out of date, or they may be too generalised to capture the minutiae of an area. Such limitations are not as significant as they once were since we now have access to data in more detail than ever before, but this does not relinquish the need to get a sense for the broader context of the study area. 
 
+## Lecture notes {-}
+The slides for this week's lecture can be downloaded here [[Link]](https://github.com/jtvandijk/GEOG0014/blob/master/data/w08_gif.pdf).
+
 ## This week {-}
 This week we will be mapping **crime hotspots** in the London boroughs of [Camden](https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en) and [Islington](https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en). The data we will be working with for this week's task are downloaded from the [data.police.uk](https://data.police.uk/) website. The release of official police crime data to the public was controversial at the time, with some people expressing concern that areas will have reputational damage, that the identities of victims would be revealed and that there would be social and economic consequences such as a fall in house prices in high crime areas. Others argued that the release of the data would be an important step in making the police force more accountable since the public could track whether crimes were being solved or if police are using their stop and search powers to target specific groups. 
 
@@ -138,7 +141,7 @@ Do not use QGIS 2.18 as the steps in this tutorial will not work!
 knitr::include_graphics('images/w08/open_qgis.png')
 ```
 
-It may take a little while before QGIS has started, so be patient. Once opened, you will see the QGIS interface:
+It may take a little while before QGIS has started, so be patient. In some cases Desktop@UCL Anywhere fails to start QGIS on the first attempt, you may have to give it several attempts. Once QGIS has started, you will see the QGIS interface:
 
 ```{r interface-qgis, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='The QGIS interface. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/interface.png){target="_blank"}'}
 knitr::include_graphics('images/w08/interface.png')
@@ -290,7 +293,7 @@ Do not forget to save your progress once a while!
 :::
 
 ## Visualising data {-}
-Based on the shapes of the streets and the outline of the street network, you may be able to recognise your allocated street already. However, we can also add something called a *base map* layer. A base map is a layer with geographic information that serves as a background and is incredibly useful when you want to add some context to your map. We do need a little plugin to add this base map. We can do that as follows:
+Based on the shapes of the streets and the outline of the street network, you may be able to recognise some streets already. However, we can also add something called a *base map* layer. A base map is a layer with geographic information that serves as a background and is incredibly useful when you want to add some context to your map. We do need a little plugin to add this base map. We can do that as follows:
 
 - Go to **Plugins** > **Manage and Install Plugins**.
 - Search for **QuickMapServices** and click on **Install plugin**.
@@ -422,13 +425,12 @@ This part of the assignment focuses on *anti-social behaviour* and *theft from p
 
 1.	Using what you have learnt in the computer tutorial, create two heatmaps for **Camden and Islington**. The first map is to show *anti-social behaviour* and the second map should show *theft from person*.
 2.	There are a number of crime **hot spots** for *anti-social behaviour* and *theft from person* that appear near UCL (particularly around Kings Cross Station).  Visit one of these areas and note down the features that distinguish them from their surrounding lower crime areas. 
+3. You may use 1-2 pages your field notebook for your individual observations. If you want to, you can take photographs to add to your worksheet submission. Please avoid photographs that clearly feature individual people.
 
 :::note
 **Note** <br />
 For your visit: **make sure that you visit as a group during the scheduled Friday afternoon slot and follow advice in the [risk assessment](https://moodle.ucl.ac.uk/pluginfile.php/4433099/mod_resource/content/1/%20GiFII%20risk%20assessment.pdf)**. Check the weather forecast and prepare accordingly. 
 :::
-
-3. You may use 1-2 pages your field notebook for your individual observations. If you want to, you can take photographs to add to your worksheet submission. Please avoid photographs that clearly feature individual people.
 
 #### Part II: Your allocated street {-} 
 :::tip
@@ -437,7 +439,12 @@ This part of the assignment focuses on *all types* of crime in your allocated st
 
 1.	Using the full crime data set, zoom in on the street you have been allocated. What is the dominant type of crime on this street and its surrounding area in **November 2021**?
 2.	Revisit the [data.police.uk](https://data.police.uk/) website and create a heatmap for all crime around your street in **November 2020** and **November 2022**. As there may be very few or no crimes in your allocated street, you can zoom out a little to incorporate surrounding streets. Do the patterns and dominant crime types differ over the course of the years?
-3.	Given your knowledge of your street and your observations of the crime hotspots around UCL and Kings Cross what other data sets might be useful to analyse crime in London?
+3.	Given your knowledge of your street and your observations of the crime hotspots around UCL and Kings Cross what other data sets might be useful to analyse crime in London? 
+
+:::note
+**Note** <br />
+If your allocated street falls outside Camden and Islington but you would like to incorporate a road network in your map, you can download the full road network for London here as a `zip` file: [[Link]](https://github.com/jtvandijk/GEOG0014/blob/master/data/AllRoads.zip). Please do note that this file is significantly larger than the `roads` file that we have used so far, so you may encounter some performance issues.
+:::
 
 #### Worksheet submission {-}
 :::warning
@@ -451,8 +458,8 @@ The report should include:
 
 You can find the submission link for this final worksheet task on [Moodle](https://moodle.ucl.ac.uk/course/view.php?id=26400):
 
-- One submission per group. Make sure to include the [group work coversheet](https://moodle.ucl.ac.uk/pluginfile.php/4674309/mod_label/intro/GEOG0014%20Geography%20in%20the%20Field%20II_Groupwork_coversheet.docx)) in your submission and you follow the [guidelines for group submissions](https://moodle.ucl.ac.uk/course/view.php?id=26400)). 
-- Your file should be submitted anonymously by the allocated team leader by **noon on Monday 20 March**, using the Turnitin link on the course [Moodle page](https://moodle.ucl.ac.uk/course/view.php?id=26400)) *GEOG0014 Worksheet 4 London mapping*.
+- One submission per group. Make sure to include the [group work coversheet](https://moodle.ucl.ac.uk/pluginfile.php/4674309/mod_label/intro/GEOG0014%20Geography%20in%20the%20Field%20II_Groupwork_coversheet.docx) in your submission and you follow the [guidelines for group submissions](https://moodle.ucl.ac.uk/course/view.php?id=26400). 
+- Your file should be submitted anonymously by the allocated team leader by **noon on Monday 20 March**, using the Turnitin link on the course [Moodle page](https://moodle.ucl.ac.uk/course/view.php?id=26400) *GEOG0014 Worksheet 4 London mapping*.
 - Please submit the worksheet as a `Word` or `PDF` document, no larger than 40 MB.
 - Do check that the file has uploaded and displays correctly. 
 

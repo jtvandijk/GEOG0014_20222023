@@ -33,7 +33,3 @@ fig:hot-crime
 fig:hot-crime-asb
 fig:bor-out
 fig:export-map
-why-london
-this-week
-loading-spatial-data
-mapping-london
