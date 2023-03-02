@@ -6,9 +6,9 @@ site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
 link-citations: yes
-github-repo: "jtvandijk/GEOG0014_20212022"
+github-repo: "jtvandijk/GEOG0014"
 description: "GEOG0014: Geography in the Field II."
-url: 'https\://jtvandijk.github.io/GEOG0014_20212022/'
+url: 'https\://jtvandijk.github.io/GEOG0014/'
 ---
 
 #  {-}
